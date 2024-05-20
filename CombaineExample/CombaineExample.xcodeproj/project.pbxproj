@@ -15,6 +15,7 @@
 		10255F242BFBB76200F32BB2 /* CombaineExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10255F232BFBB76200F32BB2 /* CombaineExampleUITests.swift */; };
 		10255F262BFBB76200F32BB2 /* CombaineExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10255F252BFBB76200F32BB2 /* CombaineExampleUITestsLaunchTests.swift */; };
 		10255F332BFBC1E600F32BB2 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10255F322BFBC1E600F32BB2 /* ContentViewModel.swift */; };
+		10255F712BFBF35C00F32BB2 /* UiKitExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10255F702BFBF35C00F32BB2 /* UiKitExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		10255F232BFBB76200F32BB2 /* CombaineExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombaineExampleUITests.swift; sourceTree = "<group>"; };
 		10255F252BFBB76200F32BB2 /* CombaineExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombaineExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		10255F322BFBC1E600F32BB2 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		10255F702BFBF35C00F32BB2 /* UiKitExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiKitExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				10255F082BFBB76100F32BB2 /* CombaineExampleApp.swift */,
 				10255F0A2BFBB76100F32BB2 /* ContentView.swift */,
 				10255F322BFBC1E600F32BB2 /* ContentViewModel.swift */,
+				10255F702BFBF35C00F32BB2 /* UiKitExample.swift */,
 				10255F0C2BFBB76200F32BB2 /* Assets.xcassets */,
 				10255F0E2BFBB76200F32BB2 /* Preview Content */,
 			);
@@ -263,6 +266,7 @@
 				10255F0B2BFBB76100F32BB2 /* ContentView.swift in Sources */,
 				10255F092BFBB76100F32BB2 /* CombaineExampleApp.swift in Sources */,
 				10255F332BFBC1E600F32BB2 /* ContentViewModel.swift in Sources */,
+				10255F712BFBF35C00F32BB2 /* UiKitExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
