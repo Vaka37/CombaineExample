@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = CancellingMultiplePipelinesViewModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group {
+            HStack{
+                TextField("Name", text: $viewModel.firstName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Text(viewModel.firstNameValidation)
+            }
+            HStack{
+                TextField("lastName", text: $viewModel.lastName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Text(viewModel.lastNameValidation)
+            }
         }
         .padding()
+        
+        Button("Cancel") {
+            viewModel.cancelAllValidations()
+        }
     }
 }
 
