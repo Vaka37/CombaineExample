@@ -8,14 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = FailPublisherViewModel()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if let error = viewModel.error?.rawValue {
+                Text(error)
+                    .font(.title)
+                    .foregroundColor(.green)
+                    .padding()
+            }
+            TextField("Введите число", text: $viewModel.text)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .keyboardType(.numberPad)
+                .padding()
+            HStack {
+                Button("Добавить") {
+                    viewModel.save()
+                }
+                
+                Button("Очистить список") {
+                    viewModel.removeAll()
+                }
+            }
+            List(viewModel.items, id: \.self){ item in
+            Text("\(item)")
+            }
         }
-        .padding()
+
     }
 }
 
