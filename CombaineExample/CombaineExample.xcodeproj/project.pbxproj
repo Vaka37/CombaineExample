@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1019054C2BFFD95700F420DF /* JustSequenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019054B2BFFD95700F420DF /* JustSequenceViewModel.swift */; };
 		10255F092BFBB76100F32BB2 /* CombaineExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10255F082BFBB76100F32BB2 /* CombaineExampleApp.swift */; };
 		10255F0B2BFBB76100F32BB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10255F0A2BFBB76100F32BB2 /* ContentView.swift */; };
 		10255F0D2BFBB76200F32BB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10255F0C2BFBB76200F32BB2 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1019054B2BFFD95700F420DF /* JustSequenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustSequenceViewModel.swift; sourceTree = "<group>"; };
 		10255F052BFBB76100F32BB2 /* CombaineExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombaineExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10255F082BFBB76100F32BB2 /* CombaineExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombaineExampleApp.swift; sourceTree = "<group>"; };
 		10255F0A2BFBB76100F32BB2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				10255F082BFBB76100F32BB2 /* CombaineExampleApp.swift */,
 				10255F0A2BFBB76100F32BB2 /* ContentView.swift */,
+				1019054B2BFFD95700F420DF /* JustSequenceViewModel.swift */,
 				10255F0C2BFBB76200F32BB2 /* Assets.xcassets */,
 				10255F0E2BFBB76200F32BB2 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				10255F0B2BFBB76100F32BB2 /* ContentView.swift in Sources */,
 				10255F092BFBB76100F32BB2 /* CombaineExampleApp.swift in Sources */,
+				1019054C2BFFD95700F420DF /* JustSequenceViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
