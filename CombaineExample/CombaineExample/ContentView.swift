@@ -7,18 +7,79 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ProductLoadingView: View {
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            switch viewModel.state {
+            case .loading:
+                timerView
+                if viewModel.isConnecting {
+                    loadingProduct
+                } else {
+                    VStack {
+                        Spacer()
+                        buttonStartView
+                    }
+                }
+            case .data:
+                timerView
+                listView
+                buttonStartView
+            case .error(let error):
+                Text(error.localizedDescription)
+            }
         }
-        .padding()
+    }
+    
+    @StateObject var viewModel = ProductViewModel()
+    
+    private var timerView: some View {
+        Text("time left \(viewModel.timerLeft)")
+            .font(.title)
+    }
+    
+    private var listView: some View {
+        let filteredProducts = viewModel.filterByPrice(products: viewModel.dataToProducts)
+        let finalProducts = viewModel.filterByImagePresence(products: filteredProducts)
+        
+        return List(finalProducts, id: \.self) { item in
+            HStack {
+                Image(systemName: item.imageName ?? "")
+                Text(item.name)
+                Text("\(item.price) руб")
+            }
+        }
+    }
+    
+    private var buttonStartView: some View {
+        Button(action: {
+            withAnimation(Animation.easeInOut(duration: 0.3).repeatCount(13, autoreverses: true)) {
+                viewModel.start()
+                viewModel.performAnimation()
+            }
+        }, label: {
+            Text("Start")
+                .font(.body)
+                .padding()
+                .foregroundColor(.white)
+                .background(RoundedRectangle(cornerRadius: 100).fill(.yellow))
+                .cornerRadius(8)
+                .scaleEffect(viewModel.isAnimating ? 0.9 : 1)
+        })
+    }
+    
+    private var loadingProduct: some View {
+        VStack {
+            if viewModel.isLoadingProduct {
+                Text("Загружаю товары...")
+                    .font(.body)
+                    .foregroundColor(.yellow)
+            }
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    ProductLoadingView()
 }
